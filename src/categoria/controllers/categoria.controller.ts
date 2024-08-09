@@ -1,8 +1,9 @@
 import { Controller, Get, HttpCode, HttpStatus, Param, ParseIntPipe, Post, Body, Put, Delete } from "@nestjs/common";
 import { Categoria } from "../entities/categoria.entity";
 import { CategoriaService } from "../services/categoria.service";
+import { ApiTags } from "@nestjs/swagger";
 
-
+@ApiTags('Categoria')  // Define um grupo de endpoints no Swagger
 @Controller("/categoria")  // Define um controlador que lida com solicitação Http
 export class CategoriaController {
 
